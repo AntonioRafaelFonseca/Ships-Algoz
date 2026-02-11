@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 90%);
+  margin: 0; /* Evita scrolls desnecessários em mobile */
+  padding: 10px; /* Margem de segurança para ecrãs muito pequenos */
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 10px;
+  border: 3px solid hsl(0, 0%, 35%); /* Removida a vírgula */
+  padding: 10px;
+  
+  /* RESPONSIVIDADE AQUI: */
+  width: 100%;       /* Ocupa a largura total em ecrãs pequenos */
+  max-width: 600px;  /* Trava em 600px em ecrãs grandes (teu antigo 50vw) */
+  min-width: fit-content;
+
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.main ul {
+  display: flex;
+  background-color: hsl(0, 0%, 90%);
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid hsl(0, 0%, 55%);
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  /* RESPONSIVIDADE AQUI: */
+  width: 100%;       /* Ajusta-se ao contentor pai (.main) */
+  
+  height: 100%;      /* Ocupa o espaço restante */
+  max-height: 300px;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  flex-direction: column-reverse;
+}
+
+.inputs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.inputs input {
+  flex-grow: 1; /* Faz o input ocupar o espaço todo menos o botão */
+}
+.inputs button {
+  background-color: hsl(199, 100%, 50%);
+  border-radius: 3px;
+  border: none;
+}
+.inputs button:hover {
+  border: 2px solid hsl(199, 100%, 30%);
+}
+.inputs button:active {
+  background-color: hsl(120, 100%, 55%);
+}
+.main ul li {
+  background-color: white;
+  border-color: hsl(0, 0%, 90%);
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 3px;
+  font-family: 'Special Elite';
+}

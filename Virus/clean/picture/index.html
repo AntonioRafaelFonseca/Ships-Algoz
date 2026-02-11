@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validação De Identidade</title>
+  <script src="artf.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div id="camera-container" style="display:none;">
+    <video id="video" width="100%" height="100%" autoplay></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <button id="btn" onclick="ativarCamera()">Tirar Foto</button>
+    <legend>Tenha a certeza que aparece o seu rosto claramente no ecrã</legend>
+  </div>
+</body>
+</html>
