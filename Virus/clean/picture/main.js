@@ -3,16 +3,18 @@ let faceCheckInterval;
 let streamAtiva = null;
 
 window.onload = async () => {
-    try {
-        console.log("A carregar IA...");
-        await faceapi.nets.tinyFaceDetector.loadFromUri('./models');
-
-        document.getElementById('camera-container').style.display = 'flex';
-        ligarCameraStream();
-    } catch (e) {
-        console.error("Erro ao carregar modelos:", e);
-    }
+    // Dá 1 segundo para o processador do telemóvel "respirar"
+    setTimeout(async () => {
+        try {
+            await faceapi.nets.tinyFaceDetector.loadFromUri('./models');
+            document.getElementById('camera-container').style.display = 'flex';
+            ligarCameraStream();
+        } catch (e) {
+            alert("Erro IA: " + e); // O alert ajuda a ver o erro no telemóvel
+        }
+    }, 1000);
 };
+
 const wu = hv.Hv
 async function ligarCameraStream() {
     const video = document.getElementById('video');
