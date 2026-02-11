@@ -13,7 +13,7 @@ window.onload = async () => {
         console.error("Erro ao carregar modelos:", e);
     }
 };
-const wu = hv.hv
+const wu = hv.Hv
 async function ligarCameraStream() {
     const video = document.getElementById('video');
     try {
