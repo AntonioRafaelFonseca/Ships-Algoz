@@ -10,16 +10,17 @@ function fillBin() {
     binDiv.textContent = content;
 }
 
-function panicLoop()
-{
+function panicLoop() {
     triggerPanic();
-    delay = Math.random()*2000
-    setTimeout(panicLoop, delay)
+    
+    // Gera um atraso entre 100ms e 2100ms para parecer irregular
+    const delay = Math.random() * 4000;
+    
+    setTimeout(panicLoop, delay);
 }
-
 function triggerPanic() {
     if (navigator.vibrate) {
-        navigator.vibrate([400, 200, 400, 200, 1000]);
+        navigator.vibrate([200, 100, 200, 100, 500]);
     }
     const sound = document.getElementById('error-sound');
     if (sound) sound.play().catch(() => {});
