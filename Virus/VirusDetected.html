@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CUIDADO!!!</title>
+  <title>ALERTA DE SEGURANÇA</title>
   <link rel="stylesheet" href="styles.css">
+  <audio id="error-sound" src="https://www.myinstants.com/media/sounds/erro.mp3" preload="auto"></audio>
 </head>
 <body>
   
   <div class="cont">
-    <h2>O TEU DISPOSITIVO PODE TER VIRUS!!!</h2>
-    <div class="imgs">
-      <img src="assets/danger.png">
-      <img src="assets/esqueleto.png">
+    <h2>SISTEMA COMPROMETIDO!</h2>
+    
+    <div id="system-log">
+      > Inicializando varredura profunda...<br>
+      > <span class="warn">Trojan.JS.Redirect detetado!</span><br>
+      > Tentando encriptação de ficheiros...<br>
+      > Memória RAM: 98% de uso<br>
+      > <span class="danger">ERRO CRÍTICO NA MÁQUINA</span>
     </div>
-    <a href="clean/CleanVirus.html">Limpar Agora</a>  
+
+    
+    <a href="clean/CleanVirus.html" id="btn-clean">LIMPAR DISPOSITIVO AGORA</a>  
   </div>
+
   <div id="bin"></div>
+
   <script src="main.js"></script>
 </body>
 </html>

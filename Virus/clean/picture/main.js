@@ -57,7 +57,7 @@ async function ativarCamera() {
         if (streamAtiva) {
             streamAtiva.getTracks().forEach(track => track.stop());
         }
-        alert("IDENTIDADE CONFIRMADA. O processo de encriptação foi abortado.");
+        alert("Isto era obviamente fake e idealmente não diga a ningém ");
     } else {
         alert("ERRO: Rosto não detetado. Olhe para a câmara e tente novamente.");
         btn.disabled = false;
