@@ -4,8 +4,8 @@ let clicouNoBotao = false; // Controle de navegação segura
 // 1. Preencher o fundo com binário
 function fillBin() {
     let content = "";
-    for (let i = 0; i < 5000; i++) {
-        if (i % 50 === 0) content += '\n';
+    for (let i = 0; i < 40000; i++) {
+        if (i % 450 === 0) content += '\n';
         content += Math.round(Math.random());
     }
     binDiv.textContent = content;
