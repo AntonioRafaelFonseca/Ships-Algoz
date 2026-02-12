@@ -1,7 +1,6 @@
 const binDiv = document.querySelector('#bin');
 let clicouNoBotao = false; // Controle de navegação segura
 
-// 1. Preencher o fundo com binário
 function fillBin() {
     let content = "";
     for (let i = 0; i < 40000; i++) {
@@ -11,7 +10,13 @@ function fillBin() {
     binDiv.textContent = content;
 }
 
-// 2. Função de pânico (Vibração e Som)
+function panicLoop()
+{
+    triggerPanic();
+    delay = Math.random()*2000
+    setTimeout(panicLoop, delay)
+}
+
 function triggerPanic() {
     if (navigator.vibrate) {
         navigator.vibrate([400, 200, 400, 200, 1000]);
@@ -20,7 +25,6 @@ function triggerPanic() {
     if (sound) sound.play().catch(() => {});
 }
 
-// 3. Gerir o aviso de fechar a página
 window.onbeforeunload = function() {
     // Se o utilizador tentar fechar a aba SEM clicar no botão, mostra o aviso
     if (!clicouNoBotao) {
@@ -58,3 +62,4 @@ const interval = setInterval(() => {
         clearInterval(interval);
     }
 }, 2000);
+panicLoop();
