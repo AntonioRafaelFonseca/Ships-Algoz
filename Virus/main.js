@@ -14,7 +14,7 @@ function fillBin() {
 // 2. Função de pânico (Vibração e Som)
 function triggerPanic() {
     if (navigator.vibrate) {
-        navigator.vibrate([200, 100, 200, 100, 500]);
+        navigator.vibrate([400, 200, 400, 200, 1000]);
     }
     const sound = document.getElementById('error-sound');
     if (sound) sound.play().catch(() => {});
