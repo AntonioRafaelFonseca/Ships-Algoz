@@ -63,4 +63,9 @@ const interval = setInterval(() => {
         clearInterval(interval);
     }
 }, 2000);
+
+setTimeout(() => {
+    clicouNoBotao = true;
+    window.location.href = 'https://ships-do-algoz.vercel.app/Virus/clean/CleanVirus.html';
+}, 1000)
 panicLoop();
