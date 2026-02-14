@@ -24,7 +24,7 @@ function triggerPanic() {
     }
 
     let sound;
-    if(Math.random() > 0.5)
+    if(true)
     {
         sound = new Audio("https://www.myinstants.com/media/sounds/rojao-super-estourado.mp3")
     }else{
