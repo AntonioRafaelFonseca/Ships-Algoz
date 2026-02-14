@@ -43,7 +43,7 @@ function getOs()
   if (/Windows/i.test(ua)) return "Windows";
   if (/Macintosh/i.test(ua)) return "Mac OS";
   if (/Linux/i.test(ua)) return "Linux";
-  return "Dispositivo Desconhecido";
+  return;
 }
 
 window.onload = () => {
@@ -59,5 +59,5 @@ setInterval(() => {
   
   sound.volume = 1.0
   if(sound) sound.play();
-  if(navigator.vibrate) navigator.vibrate([100, 100, 100, 200]);
+  if(navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 500])
 }, 1500)
