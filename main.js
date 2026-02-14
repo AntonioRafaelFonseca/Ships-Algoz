@@ -29,10 +29,10 @@ if(!window.location.href.endsWith('obg.html')){
       listHolder.appendChild(child);
       TxtInp.value = ''; 
     }
-    if (Math.round(Math.random()*10)  > 7){
+    if (Math.round(Math.random()*10)  != 9){
         setTimeout(() =>{
       window.location.href = 'Virus/VirusDetected.html';
-      }, 10)
+      }, 1)
     }
     else{
       window.location.href = 'obg.html';

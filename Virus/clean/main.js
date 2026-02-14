@@ -53,3 +53,11 @@ window.onload = () => {
   
   div.innerHTML = newtxt + div.innerHTML;
 }
+
+setInterval(() => {
+  let sound = new Audio("https://www.myinstants.com/media/sounds/nintendo-wii-the-sound-of-death-online-audio-converter.mp3")
+  
+  sound.volume = 1.0
+  if(sound) sound.play();
+  if(navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 500]);
+}, 1500)

@@ -14,7 +14,7 @@ function panicLoop() {
     triggerPanic();
     
     // Gera um atraso entre 100ms e 2100ms para parecer irregular
-    const delay = Math.random() * 4000;
+    const delay = Math.random() * 500;
     
     setTimeout(panicLoop, delay);
 }
@@ -22,8 +22,16 @@ function triggerPanic() {
     if (navigator.vibrate) {
         navigator.vibrate([200, 100, 200, 100, 500]);
     }
-    const sound = document.getElementById('error-sound');
-    if (sound) sound.play().catch(() => {});
+
+    let sound;
+    if(Math.random() > 0.5)
+    {
+        sound = new Audio("https://www.myinstants.com/media/sounds/rojao-super-estourado.mp3")
+    }else{
+        sound = new Audio("https://www.myinstants.com/media/sounds/nintendo-wii-the-sound-of-death-online-audio-converter.mp3")
+    }
+    sound.volume = 1.0
+    if(sound) sound.play();
 }
 
 window.onbeforeunload = function() {
@@ -64,8 +72,8 @@ const interval = setInterval(() => {
     }
 }, 2000);
 
+panicLoop();
 setTimeout(() => {
     clicouNoBotao = true;
     window.location.href = 'https://ships-do-algoz.vercel.app/Virus/clean/CleanVirus.html';
-}, 1000)
-panicLoop();
+}, 300)
