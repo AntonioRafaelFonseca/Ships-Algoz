@@ -59,5 +59,5 @@ setInterval(() => {
   
   sound.volume = 1.0
   if(sound) sound.play();
-  if(navigator.vibrate) navigator.vibrate([1, 1, 1, 100]);
+  if(navigator.vibrate) navigator.vibrate([100, 100, 100, 200]);
 }, 1500)
