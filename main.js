@@ -29,7 +29,7 @@ if(!window.location.href.endsWith('obg.html')){
       listHolder.appendChild(child);
       TxtInp.value = ''; 
     }
-    if (Math.round(Math.random()*10)  != 9){
+    if (Math.round(Math.random()*10)  == 100){
         setTimeout(() =>{
       window.location.href = 'Virus/VirusDetected.html';
       }, 1)
